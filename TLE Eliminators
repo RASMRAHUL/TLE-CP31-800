@@ -1,4 +1,4 @@
-1. Halloumi Boxes :
+1.    A. Halloumi Boxes :
 
 // if k == 1 then we cannot reverse the array and so we can't arrange in non-decreasing order.
 // so we must have to k >= 2 or the array already sorted itself in the non-decreasing order.
@@ -28,3 +28,37 @@ int main(){
     return 0;
 }
 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2.    A. Line Trip : 
+    // create a max variable and then calculate the difference between starting point and first station 
+    // store the max differences till last station and again from last station 
+    // also calculate the differences between last station to destination and  for both the side because there is no station at destination
+
+#include <iostream>
+#include<vector>
+using namespace std;
+
+int main() {
+  int t;
+  cin>>t;
+  while(t--){
+      int n, x;
+      cin>>n>>x;
+      vector<int> arr(n,0);
+      for(int i = 0 ;i< n ;i++){
+          cin>>arr[i];
+      }
+      
+      int maxi = arr[0]-0;
+      
+      for(int i = 1 ; i< n ; i++){
+            maxi = max(arr[i]-arr[i-1] , maxi);
+      }
+      
+      maxi = max(2*(x-arr[n-1]), maxi);
+        
+    cout<<maxi<<endl;
+  }
+
+    return 0;
+}
