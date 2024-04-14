@@ -116,3 +116,60 @@ int main()
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4. A. Game with Integers
+
+// first add 1 or sub 1 in the n value and then check the modulus of 3  == 0 then mark true vanyaWin and break the loop
+// else increase the n by 1 to represent the play chance of vanya and then try to avoid the modulus of 3 after increasing 
+// the value by 2 which represents the play chance of vanya and vova.
+
+#include <iostream>
+#include <unordered_map>
+#include <vector>
+
+using namespace std;
+
+void solve(){
+    int n;
+    cin>>n;
+    int c= 10;
+    bool vanyaWin = false;
+    while(c-- > 0)
+    {
+        if((n+1) %3 == 0 || (n-1)%3 == 0)
+        {
+            vanyaWin = true;
+            break;
+        }
+        else
+        {
+            n++;
+            if((n+2)%3 != 0)
+            {
+                n++;
+            }
+            else if((n-2)%3 != 0)
+            {
+                n--;
+            }
+        }
+    }
+    if(vanyaWin)
+        cout<<"First"<<endl;
+    else
+        cout<<"Second"<<endl;
+    
+}
+
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+        solve();
+    return 0;
+}
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+5. 
