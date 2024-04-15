@@ -172,4 +172,41 @@ int main()
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-5. 
+5. A. Jagged Swaps
+
+// only the observations trick here
+// if arr[0] != 1 then always "NO" bcs the first position is static.
+// else always true.
+
+#include <iostream>
+#include <unordered_map>
+#include <vector>
+#include<algorithm>
+ 
+using namespace std;
+ 
+void solve(){
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i = 0 ; i< n ;i++){
+        cin>>arr[i];
+    }
+    if(arr[0] != 1)
+      cout<<"NO"<<endl;
+    else
+       cout<<"YES"<<endl;
+}
+ 
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+        solve();
+    return 0;
+}
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..
+
+6. 
